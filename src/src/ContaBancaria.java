@@ -5,14 +5,15 @@ public class ContaBancaria {
 
         String nome;
         double saldo;
-        int agencia;
+        String agencia;
+        int numero;
 
         Scanner scanner = new Scanner(System.in);
 
 
     }
 
-    public void Consulta(){
+    public static void Consulta(){
 
         System.out.println("Qual dado deseja consultar?");
         System.out.println("1-nome");
@@ -21,18 +22,17 @@ public class ContaBancaria {
         int dado = scanner.nextInt();
 
         switch(dado){
-            switch (dado) {
-                case 1:
-                    System.out.println(nome);
-                    break;
-                case 2:
-                    System.out.println(saldo);
-                    break;
-                case 3:
-                    System.out.println(agencia);
-                    break;
-                default:
-                    System.out.println("Opção inválida"); // Se nenhum caso for atendido
+            case 1:
+                System.out.println(nome);
+                break;
+            case 2:
+                System.out.println(saldo);
+                break;
+            case 3:
+                System.out.println(agencia);
+                break;
+            default:
+                System.out.println("Opção inválida"); // Se nenhum caso for atendido
         }
 
 
@@ -46,10 +46,15 @@ public class ContaBancaria {
         nome = scanner.nextLine();
 
         System.out.println("Número da Agência:");
-        agencia = scanner.nextInt();
+        agencia = scanner.nextLine();
 
         System.out.println("Saldo a Depositar:");
         saldo = scanner.nextFloat();
+
+        System.out.println("Insira o numero:");
+        numero = scanner.nextInt();
+
+        System.out.println("Seja Bem vindo");
 
         System.out.println("Deseja consultar algum dado?");
         String opcao = scanner.nextLine();
