@@ -64,7 +64,7 @@ public class ContaBancaria {
                 Consulta();
                 break;
             case "não":
-                    "programa encerrado"
+                    System.out.println("programa encerrado");
                 break;
         }
 
